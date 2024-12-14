@@ -14,9 +14,96 @@ mv source dest -> to move a file
 mkdir new_filename-> make directory
 rm filename -> remove/delete a file
 
+View 
+----
 cat filename -> to see the contents of a file
 less filename -> to see the contents of file with large data. It will move page by page
 
+Edit
+----
 nano filename -> edit/modify a file content
 vi filename- > to edit a file, press i to insert data 
 Esc, !wq -> save the modified file
+
+System INFO 
+-----------
+df -h -> shows disk space usage as per the partions
+free -h -> shows memory space 
+top -> gives an interactive view of all the running processes.
+kill pid_num -> to kill any process
+
+User info management 
+--------------------
+CURRENT -> whoami -> gives the current username 
+ROOT -> sudo su 
+        password  -> will change to root user 
+EXIT -> exit -> chanege from root to normal user
+
+chmod -> to change read ,write execute User permissions for a file or dir 
+
+Managing Services & Processes
+-----------------------------
+systemctl status -> to check if services is running
+
+systemctl status nginx -> to check if the nginx servie is running
+
+systemctl start service_name -> to start a servie
+systemctl stop servrice_name -> to stop a service
+
+? Enable/disable the servie can also be done 
+
+Process management
+------------------
+ps 
+top 
+kill pid
+
+Installing & updating software
+------------------------------
+APT - for Ubuntu
+YUM - for Redhat
+
+sudo apt update -> to update the package
+sudo apt upgrade -> upgrade all packages
+sudo apt install package_name -> to install a package  ( ex:sudo apt install ifconfig)
+
+sudo yum update -> update the package for redhat linux
+sudo yum upgrade -> package upgrate for redhat linux
+sudo yum install -> package installation for redhat linux 
+
+Networking
+----------
+ip addr
+ifconfig
+ping ip_address -> to test connectivity
+ping domain -> to check & test connectivity
+traceroute  ip_address 
+? nmcli 
+
+Monitoring & Logs
+-----------------
+logs viewed in var/logs
+system logs located in 'cat /var/log/syslog' 
+   if cat output is long then use 'less' cmd to get the o/p page by page
+  Less cmd o/p - Enter = line by line, Space = page by page
+
+top vs htop = top is old & comes preinstalled.  htop is new & once htop is installed it shows output in colours
+q -> quit
+
+Kernal info 
+----------
+uname  -r
+
+curl -> to fetch data from url (eg: curl www.abc.com)
+
+Search
+-----
+find -name "filename"  ( get in the directory where file is located using cd cmd,become root user & find the file)
+grep -> search inside files for the text ( grep -r "text" /dir_name -> will check for the text in that directory)
+
+Compress & decompress
+--------
+gzip filename -> will zip the file
+gunzip filename -> will unzip the file
+? tar - new cmd
+
