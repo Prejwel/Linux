@@ -1,0 +1,22 @@
+ip a -> get system ip
+ssh username@ip_adderss-> to connect to remote system
+apropos directory -> to list the cmds with description having directory 
+  1st time if apropos dosent work , then use 'sudo mandb' (to create & pull data from a DB") & then use 'apropos directory' cmd
+
+pwd - present working dir 
+cd /dir -> to move to a dir
+clear -> clear the screen 
+ls -> list the contents of dir
+ls -l -> list more detais abt folder or file
+touch filename.txt -> create a file
+cp source dest -> copy a file from source to a destination
+mv source dest -> to move a file 
+mkdir new_filename-> make directory
+rm filename -> remove/delete a file
+
+cat filename -> to see the contents of a file
+less filename -> to see the contents of file with large data. It will move page by page
+
+nano filename -> edit/modify a file content
+vi filename- > to edit a file, press i to insert data 
+Esc, !wq -> save the modified file
