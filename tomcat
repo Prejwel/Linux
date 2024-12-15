@@ -1,0 +1,16 @@
+port - 8080
+
+port change can be done in server.xml -> vi server.xml, type '/connector', insert (i) , change port to 8090 , Esc :wq! 
+systemctl restart tomcat -> port change will come into effect now
+
+Apache tomcat runs on Catalina (servlet container)
+
+    Servlet - a Java programming language class that is used to extend the capabilities of servers that host applications accessed by means of a request-response programming model
+    Servlet container - a program that manages and executes servlets
+
+/var/logs/tomcat ->  tomcat logs
+tomcat_home/conf/server.xml - tomcat config file 
+
+
+diff btw vi & vim -> vim (colourful)
+
