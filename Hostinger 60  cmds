@@ -47,7 +47,8 @@ tar - bundles multiple files or directories into an archive without compression.
     tar [options] tar_file_name file1 file2
     tar -cfz archive.tar.gz file1.txt file2.txt -> to enable compression
 
-unpack tar file -> tar [options] tar_file_name 
+* unpack tar file -> tar [options] tar_file_name 
+      tar xf tar_filename.tar.gz -C /location -> file will get untared to the gicen location
 
 ( c-> create ,
 v - verbos mode ( get more info  in list -permissions etc ,
