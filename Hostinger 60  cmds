@@ -40,12 +40,138 @@ file - check the file type
 zip - compresses one or multiple files into a ZIP archive, reducing their size 
       zip [options] zip_file_name file1 file2
 
-unzip - To extract a compressed file into your current working directory
-      unzip [options] zip_file_name
+gunzip - To extract a compressed file into your current working directory
+      gunzip [options] zip_file_name
 
 tar - bundles multiple files or directories into an archive without compression.
     tar [options] tar_file_name file1 file2
-    tar -cfz archive.tar.gz fle1.txt file2.txt -> to enable compression
+    tar -cfz archive.tar.gz file1.txt file2.txt -> to enable compression
 
-unpack tar file -> tar [options] tar_file_name
+unpack tar file -> tar [options] tar_file_name 
+
+( c-> create ,
+v - verbos mode ( get more info  in list -permissions etc ,
+f -> tells tar that we want to provide a new file name , filename.tar (.tar not necessery) , in the end provide the filename that needs to archived 
+x -> xtract the archived tar file
+
+nano ,vi - edit the file
+cat - print the contents of file
+grep ->  lets you search specific lines from a file using keywords ( ls | grep "file.txt", from the list shown as o/p , search for file.txt)
+head -> print the first few entries of a file , 1st 10 lines will be printed, this can be changed using -n option 
+            head -n 5 ->1st 5 lines of o/p will be printed
+tail -> will extract the last few lined of a file. 
+      ping -c 10 8.8.8.8 | tail -n 5 -> will show the last 5 lined of the ping cmd o/p
+sort -> to arracnge files in a specific order ( A to Z , -r ( reverse ) , -n ( numaric sorting) )
+cut -> selects a specific section and print as output 
+      -f – selects a specific row field.
+      -b – cuts the line by a specified byte size.
+      -c – sections the line using a specified character.
+      -d – separates lines based on delimiters.
+ (ex: cut -d',' -f3-5 list.txt, extracts the third to fifth field from a comma-separated list)
+
+diff -> compares 2 different files and prints the o/p. (  ! shows where the difference happens)
+      diff filename1 filename 2
+locate -> searches for file and prints its location.
+      -r to search file usingregular expression 
+      by default locate is case sensitive . This can ebe changed using -i option
+      locate will look for files from its database. ( enter the following to reload the data manually: updatedb)
+
+find -> searched for file with in the specific directory
+      -name filename
+       find [path] [options] expression
+      –type f  will search for files only
+      -type d will find dir
+      ex: find path/to/folder -type f -name "file"
+      unlike locate cmd, find cmd searched for file in real time.
+
+sudo -> enables non-root users who are part of the sudo group to execute administrative commands.
+     
+chmod -> change the mode of file permissions 
+      chmod -rwx---r-– file1.txt
+
+? chown -> change ownership of files
+
+useradd -> create new user , useradd [options] new_username
+passwd -> create password , passwd new_username
+userdel -> delete user , userdel new_username
+
+df - will display the used space in percentage and kilobyte (KB)
+      df [options] [file system]
+du -> To check the size of a directory and its content 
+      - M to change the info from KB to MB
+top -> displays all running processes in your system and their hardware consumption.
+htop - new cmd instead of top
+ps - summarizes the status of all running processes 
+      -A -> displays all 
+      -r -> check only running processes
+uname -> displays detailed information about your Linux machine
+hostname -> to check vps hostname
+time -> measures the execution time of commands or scripts to gain insights into your system performance
+systemctl - used to manage services in your Linux system
+
+watch -> lets you continuously run a utility at a specific interval to monitor changes in the output
+      watch [options] command_name
+      watch will run your command every two seconds. This can be changed by the -n option
+
+jobs -> Jobs are tasks or commands that are running in the current shell. To check them, use the jobs command
+      jobs [options] [Job_ID]
+
+kill - kill a process 
+      kill pid
+      ps ux - to get pid
+
+shutdown - to shutdown the system
+
+ping - network check
+      sends packets to a target server and fetches the responses. It is helpful for network diagnostics
+      ping [option] [hostname_or_IP_address]
+       Ctrl + C -> to stop ping
+
+wget -> lets to download files from internet via HTTP, HTTPS, or FTP protocols.
+      Syntax: wget [options] [URL]
+     Exampple:  wget https://wordpress.org/latest.zip
+
+curl -> transfer data from or to a server by specifying its URL
+scp -> securely copy files and directories between systems over a network.
+      scp file1.txt root@185.185.185.185:path/to/folder
+
+rsync-> syncs files or folders between two destinations to ensure they have the same content
+      rsync [options] source destination
+
+ip -> list and manage system’s network parameters, similar to the ifconfig command in older linux
+      ip address show
+
+ifconfig -> old cmd for ip 
+
+netstat - displays information about your system’s network configuration
+      -a – displays listening and closed sockets.
+      -t – shows TCP connections.
+      -u – lists UDP connections.
+      -r – displays routing tables.
+      -i – shows information about network interfaces.
+      -c – continuously outputs network information for real-time monitoring.
+
+traceroute - tracks a packet’s path when traveling between hosts, providing information like the transfer time and involved routers
+      traceroute [options] destination
+nslookup -> requests a domain name system (DNS) server to check a domain linked to an IP address
+      nslookup [options] domain-or-ip [dns-server]
+
+dig -> dig command displays information about a domain. It is similar to nslookup but more comprehensive
+
+history -> to check previously run utilities
+      history [options]
+      -r to clear history
+
+man -> comprehensive guide of another utility
+echo ->  print text in your command as a Terminal output.
+cal - displays a calendar , 
+      cal [options] [month] [year]
+
+alias -> lets you set another name for a string that belongs to a file, text, program, or command name.
+
+ln -> links files or directories with a shortcut.
+      ln [options] source target
+      alias k='kill' -> will assign k as the alias for the kill command
+
+
 
