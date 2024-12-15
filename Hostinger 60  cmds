@@ -1,0 +1,51 @@
+ls -> list the contents of a folder including files and directories.
+      -R to list subfolder 
+      -a to list hidden content
+
+pwd -> present working directory
+    -L will print env variable like shortcuts
+    -P will print the exact canonical path
+
+cd -> navigate between directories
+    cd     returns to current users home dir
+    cd..   moves a dir up
+    cd-    goes back to prev dir
+
+mkdir -> creates one or more dir's
+
+rmdir -> deletes empty dir & it wont work if dir have subfolders.
+      -p force deletion
+      you must own the item you want to delete else use 'sudo' option
+
+rm -> deletes files from a dir.You must have write permission for the folder or use sudo option.
+    -r remove a folder and its contents including subdirectories
+    -i to display a confirmation message before the removal
+    -f to deactivate 
+
+cp - copy file from source to destination
+    -R to duplicate a dir & its contents to another folder
+
+mv - move file or folder to another location & also to rename a file
+    mv source dest -> to move a file
+    mv old_name new_name -> to rename 
+   Move & Rename together ->  mv old/location/of/old_name.txt new/path/for/new_name.txt -> If you specify the full path, you can simultaneously rename files and move them to a new location like this example:
+
+touch - creates a file in the path if the path is specified. If no path is given then it will create a new file in the current working dir.
+
+SYMBOLIC LINK = just like shortcut in windows
+
+file - check the file type
+      file symboliclink -> will o/p the actual file connected to symbolic link.
+----------------
+zip - compresses one or multiple files into a ZIP archive, reducing their size 
+      zip [options] zip_file_name file1 file2
+
+unzip - To extract a compressed file into your current working directory
+      unzip [options] zip_file_name
+
+tar - bundles multiple files or directories into an archive without compression.
+    tar [options] tar_file_name file1 file2
+    tar -cfz archive.tar.gz fle1.txt file2.txt -> to enable compression
+
+unpack tar file -> tar [options] tar_file_name
+
