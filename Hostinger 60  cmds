@@ -54,6 +54,7 @@ tar - bundles multiple files or directories into an archive without compression.
 v - verbos mode ( get more info  in list -permissions etc ,
 f -> tells tar that we want to provide a new file name , filename.tar (.tar not necessery) , in the end provide the filename that needs to archived 
 x -> xtract the archived tar file
+-C copy the untar file to a location.)
 
 nano ,vi - edit the file
 cat - print the contents of file
