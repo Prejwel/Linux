@@ -1,0 +1,29 @@
+443 - https - web app ( secure)
+80 - http - web app 
+port number 80 can be modified by editing the config file
+
+* default location of website related codes = /var/www/html ( absolute path )
+  index.html - is the file that it will  be looked for under /var/www/html 
+  if index.html is not available then we can create a new index.html file and write the codes according to which webpage should appear.
+
+httpd - apache webserver httpd application
+
+yum -> Linux system  package installation cmd. Using 'yum', the latest version of the pckage will be downloaded
+    ex: yum install httpd -> will install httpd package along with dependencies
+        packages are downloaded from amazon repository.
+    
+  /etc/yum.repos.d/ -> location of the amazon repositories
+
+yum search "apache" -> will show the package that need to be installed for apache & that is httpd
+
+* systemctl status httpd -> to check thr status of httpd ( loadeed or not, running/active, inactive ? etc)
+* system start httpd - start the httpd service
+* netstat -tupln -> to see the service , pid, portno:, Listening 
+config files for most of the applications will be in /etc
+
+* Configuration file location for HTTPD  -> /etc/httpd/conf/httpd.conf
+* Logs are written to /var/log/httpd
+
+http://awsEC2publicIP:80 -> should display the webpage . If its not displaying check if port 80 is added in security group rules attached to EC2 server. (Edit inbound rule - http , 80, ipv4)
+
+www.google.com = website name ( www-> resource name, google.com-> domain name)
