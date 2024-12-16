@@ -1,3 +1,8 @@
+21 -ftp
+22- ssh
+22 -sftp - same port as SSH because it runs as a subsystem over the SSH protocol
+3389 -rbp
+
 443 - https - web app ( secure)
 80 - http - web app 
 port number 80 can be modified by editing the config file
