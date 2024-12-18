@@ -166,6 +166,7 @@ history -> to check previously run utilities
 
 man -> comprehensive guide of another utility
 echo ->  print text in your command as a Terminal output.
+            echo "test" > demo.txt => will create demo.txt file with content as test.
 cal - displays a calendar , 
       cal [options] [month] [year]
 
