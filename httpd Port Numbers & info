@@ -7,6 +7,10 @@
 80 - http - web app 
 port number 80 can be modified by editing the config file
 
+New updates in
+Tomcat -> /opt/tomcat/webapps
+Httpd -> /etc/apache2/conf/httpd.conf
+
 * default location of website related codes = /var/www/html ( absolute path )
   index.html - is the file that it will  be looked for under /var/www/html 
   if index.html is not available then we can create a new index.html file and write the codes according to which webpage should appear.
