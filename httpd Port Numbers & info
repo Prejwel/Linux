@@ -1,7 +1,7 @@
 21 -ftp
 22- ssh
 22 -sftp - same port as SSH because it runs as a subsystem over the SSH protocol
-3389 -rbp
+3389 -rdp
 
 443 - https - web app ( secure)
 80 - http - web app 
